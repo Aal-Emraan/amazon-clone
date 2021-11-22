@@ -13,7 +13,7 @@ function Product({ product }) {
 				{category}
 			</p>
 			<Image src={image} width={200} height={200} objectFit="contain" />
-			<h4 className="my-3">{title}</h4>
+			<h4 className="my-3 line-clamp-2">{title}</h4>
 			<div className="flex">
 				{Array(Math.round(rating.rate))
 					.fill()
@@ -21,9 +21,7 @@ function Product({ product }) {
 						<StarIcon key={index} className="h-5 text-yellow-500" />
 					))}
 			</div>
-			<p className="text-xs line-clamp-2 hover:line-clamp-none">
-				{description}
-			</p>
+			<p className="text-xs line-clamp-3">{description}</p>
 			<div className="mb-3">
 				<Currency quantity={price} currency="GBP" />
 			</div>
