@@ -13,6 +13,10 @@ function Header() {
 			<div className="flex items-center bg-amazon_blue p-1 flex-grow py-2">
 				{/* logo */}
 
+				<div className="text-white sm:hidden">
+					<MenuIcon width={40} />
+				</div>
+
 				<div className="mt-2 flex items-center flex-grow sm:flex-grow-0">
 					<Image
 						src="https://links.papareact.com/f90"
@@ -66,8 +70,37 @@ function Header() {
 					</div>
 				</div>
 			</div>
+
+			{/* search for small device */}
+
+			<div className="bg-amazon_blue">
+				<div className="flex sm:hidden bg-yellow-400 items-center h-10 rounded-md flex-grow cursor-pointer hover:bg-yellow-500 mx-3">
+					<input
+						type="text"
+						className="p-2 h-full w-6 flex-grow flex-shrink rounded-l-md focus:outline-none px-5"
+					/>
+					<SearchIcon className="p-4 h-12" />
+				</div>
+			</div>
 			{/* bottom header */}
-			<div></div>
+			<div className="text-white space-x-3 bg-amazon_blue-light hidden md:flex items-center p-2 pl-6 whitespace-nowrap">
+				<p className="flex items-center">
+					<MenuIcon width={30} />
+					All
+				</p>
+				<p>Prime Videos</p>
+				<p>Customer Service</p>
+				<p>Registry</p>
+				<p>Gift Cards</p>
+				<p className="flex-grow">Sell</p>
+				<p className="font-bold">Shop Early Black Friday Deals</p>
+			</div>
+			<div className="md:hidden bg-amazon_blue-light text-white flex justify-around p-2">
+				<p>Deals</p>
+				<p>Amazon Basics</p>
+				<p>Bestsellers</p>
+				<p>Livestreams</p>
+			</div>
 		</header>
 	);
 }
