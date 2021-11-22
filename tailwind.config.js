@@ -10,7 +10,7 @@ module.exports = {
 			colors: {
 				amazon_blue: {
 					light: "#232f3e",
-					DEFAULT: "131921",
+					DEFAULT: "#131921",
 				},
 			},
 		},
