@@ -16,8 +16,8 @@ function Header() {
 				<div className="mt-2 flex items-center flex-grow sm:flex-grow-0">
 					<Image
 						src="https://links.papareact.com/f90"
-						width={150}
-						height={40}
+						width={130}
+						height={35}
 						objectFit="contain"
 						className="cursor-pointer"
 					/>
@@ -25,13 +25,13 @@ function Header() {
 
 				{/* location */}
 
-				<div className="text-white flex">
-					<div className="text-white flex items-center justify-center">
-						<LocationMarkerIcon width={20} />
+				<div className="text-white hidden md:flex">
+					<div className="text-white flex items-end justify-center">
+						<LocationMarkerIcon width={20} className="pb-1" />
 					</div>
 					<div className=" mx-2">
-						<p className="text-sm">Deliver to</p>
-						<p className="font-bold">Bangladesh</p>
+						<p className="text-xs">Deliver to</p>
+						<p className="font-bold text-sm">Bangladesh</p>
 					</div>
 				</div>
 
@@ -46,24 +46,23 @@ function Header() {
 				</div>
 
 				{/* right div */}
-				<div className="text-white flex">
-					<div className="mx-3">
-						<p className="text-sm">Hello Aal Emraan</p>
-						<p className="font-bold">Account & Lists</p>
+				<div className="text-white flex items-center space-x-6 mx-6 text-xs whitespace-nowrap">
+					<div className="cursor-pointer hover:underline">
+						<p>Hello Aal Emraan</p>
+						<p className="font-bold text-sm">Account & Lists</p>
 					</div>
-					<div className="mx-3">
-						<p className="text-sm">Returs</p>
-						<p className="font-bold">& Orders</p>
+					<div className="cursor-pointer hover:underline hidden md:block">
+						<p>Returs</p>
+						<p className="font-bold text-sm">& Orders</p>
 					</div>
-					<div className="mx-3">
-						<p className="text-sm">Returs</p>
-						<p className="font-bold">& Orders</p>
-					</div>
-					<div className="mx-3 flex">
+					<div className="flex cursor-pointer hover:underline relative">
+						<p className="absolute left-6 bottom-6 font-bold bg-yellow-600 w-4 h-4 text-center rounded-full">
+							0
+						</p>
 						<div>
 							<ShoppingCartIcon width={40} />
 						</div>
-						<p className="font-bold mt-4">Cart</p>
+						<p className="hidden md:inline font-bold mt-4">Cart</p>
 					</div>
 				</div>
 			</div>
