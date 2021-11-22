@@ -31,3 +31,5 @@ export async function getServerSideProps(context) {
 		},
 	};
 }
+
+// live site link: https://amazon-clone-mu-nine.vercel.app/
