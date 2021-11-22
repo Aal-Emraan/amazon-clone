@@ -73,8 +73,8 @@ function Header() {
 
 			{/* search for small device */}
 
-			<div className="bg-amazon_blue">
-				<div className="flex sm:hidden bg-yellow-400 items-center h-10 rounded-md flex-grow cursor-pointer hover:bg-yellow-500 mx-3">
+			<div className=" sm:hidden bg-amazon_blue pb-2">
+				<div className="flex bg-yellow-400 items-center h-10 rounded-md flex-grow cursor-pointer hover:bg-yellow-500 mx-3">
 					<input
 						type="text"
 						className="p-2 h-full w-6 flex-grow flex-shrink rounded-l-md focus:outline-none px-5"
