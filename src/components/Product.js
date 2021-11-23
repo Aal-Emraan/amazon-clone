@@ -2,9 +2,17 @@ import { StarIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import { useState } from "react";
 import Currency from "react-currency-formatter";
+import { useDispatch } from "react-redux";
+import { addToBasket } from "../slices/basketSlice";
 
 function Product({ product }) {
 	const { id, title, price, description, image, category, rating } = product;
+
+	const dispatch = useDispatch();
+
+	const handleAddToCart = () => {
+		product, dispatch(addToBasket(product));
+	};
 
 	const [hasPrime] = useState(Math.random() < 0.5);
 	return (
@@ -37,7 +45,10 @@ function Product({ product }) {
 					</p>
 				</div>
 			)}
-			<button className="mt-auto bg-yellow-500 text-white py-1 rounded-sm hover:bg-yellow-600">
+			<button
+				onClick={handleAddToCart}
+				className="mt-auto bg-yellow-500 text-white py-1 rounded-sm hover:bg-yellow-600"
+			>
 				Add to Cart
 			</button>
 		</div>
