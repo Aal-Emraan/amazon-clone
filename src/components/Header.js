@@ -72,7 +72,10 @@ function Header() {
 						</p>
 						<p className="font-bold text-sm">Account & Lists</p>
 					</div>
-					<div className="cursor-pointer hover:underline hidden md:block">
+					<div
+						onClick={() => session && router.push("/orders")}
+						className="cursor-pointer hover:underline hidden md:block"
+					>
 						<p>Returs</p>
 						<p className="font-bold text-sm">& Orders</p>
 					</div>
