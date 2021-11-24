@@ -28,8 +28,9 @@ function Order({ orders }) {
 			</div>
 			<div className="p-5 sm:p-10">
 				<div className="flex space-x-6 overflow-x-auto">
-					{images.map((image) => (
+					{images.map((image, i) => (
 						<img
+							key={i}
 							src={image}
 							className="h-20 sm:h-32 object-contain"
 						/>

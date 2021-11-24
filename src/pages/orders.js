@@ -22,8 +22,8 @@ function Orders({ orders }) {
 					<h1>Please sign in to see your orders</h1>
 				)}
 
-				{orders.map((order, i) => (
-					<Order orders={order} key={i} />
+				{orders.map((order) => (
+					<Order orders={order} key={order.id} />
 				))}
 			</main>
 		</div>
